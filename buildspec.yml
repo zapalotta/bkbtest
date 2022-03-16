@@ -12,4 +12,8 @@ phases:
     commands:
       - docker images
       - docker run helloworld echo "Hello, World!" 
+  post_build:
+    commands:
+      - echo Build complete
+      - docker push 059926755827.dkr.ecr.eu-central-1.amazonaws.com/bkbtest/bkbtest:latest
       
