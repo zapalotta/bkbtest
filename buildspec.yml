@@ -11,7 +11,8 @@ phases:
   build:
     commands:
       - docker images
-      - docker run helloworld echo "Hello, World!" 
+      - docker run helloworld echo "Hello, World!"
+      - docker tag helloworld:latest 059926755827.dkr.ecr.eu-central-1.amazonaws.com/bkbtest/bkbtest:latest
   post_build:
     commands:
       - echo Build complete
